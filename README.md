@@ -39,55 +39,55 @@
 
 ### 4. 실행 화면
 ------------------------------
-* 메인 페이지
-* 
+# 메인 페이지
+
 ![image](https://user-images.githubusercontent.com/48792627/126113593-ad83552f-b92d-4f2e-9ac7-c3b98c9c50fd.png)
 
 
 
-* 로그인 페이지
-* 
+# 로그인 페이지
+
 ![image](https://user-images.githubusercontent.com/48792627/126113608-61003790-9d29-423a-a6be-9d60b2269267.png)
 
 
 
-* 회원가입 페이지
+# 회원가입 페이지
 
 ![image](https://user-images.githubusercontent.com/48792627/126113641-4e300583-20eb-4a02-ae3d-77ecc6e09576.png)
 
 
 
-* 로그인 후 헤더
+# 로그인 후 헤더
 
 ![image](https://user-images.githubusercontent.com/48792627/126113687-3ea4a89d-6f9d-48a8-b15b-a78d07234095.png)
 
 
 
-* 항공권 정보 페이지
+# 항공권 정보 페이지
 
 ![image](https://user-images.githubusercontent.com/48792627/126113740-91bfbac7-da74-488d-8e5f-a1625c4d77dc.png)
 
 
 
-* 좌석 선택 페이지
+# 좌석 선택 페이지
 
 ![image](https://user-images.githubusercontent.com/48792627/126113767-61170172-4d84-47bd-9a74-5768397adedf.png)
 
 
 
-* 예약 확인 및 예약자 이름, 여권번호 설정 페이지
+# 예약 확인 및 예약자 이름, 여권번호 설정 페이지
 
 ![image](https://user-images.githubusercontent.com/48792627/126113821-6d6c3c8f-07ab-4eb3-9120-f28a8fc321da.png)
 
 
 
-* 마이페이지
+# 마이페이지
 
 ![image](https://user-images.githubusercontent.com/48792627/126113854-6ff7fc4e-ddc1-4090-8deb-749b25f412bf.png)
 
 
 
-* 정보 수정 페이지
+# 정보 수정 페이지
 
 ![image](https://user-images.githubusercontent.com/48792627/126113880-9e50bfe5-e859-46d5-86f7-e95c78a3090b.png)
 
