@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.kpu.myweb.mapper.CustomerMapper">
+  
+ 	<select id="getTime" resultType="string">
+ 		select now()
+ 	</select>
+ 	
+     <insert id="insert"> 
+   		insert into free_customer (name, id, passwd, phoneNumber, passportNumber) values
+ 		(#{name}, #{id}, #{passwd}, #{phoneNumber}, #{passportNumber})
+     </insert> 
+     
+     <select id="getPasswd" resultType="String">
+ 		select passwd from free_customer where id = #{id}
+     </select>
+ 	
+ 	<select id="checkid" resultType="int">
+	 	SELECT count(*) from free_customer where id = #{id}
+     </select>
+ 	
+     <select id="selectByCustomerid" resultType="CustomerVO">
+ 		select * from free_customer where customerId = #{customerId}
+     </select>
+     
+     <select id="selectByid" resultType="CustomerVO">
+ 		select * from free_customer where id = #{customerId}
+     </select>
+ 	
+     <select id="selectAll" resultType="org.kpu.myweb.domain.CustomerVO">
+     <![CDATA[
+ 		select * from free_customer
+      ]]> 
+     </select>
+ 	
+     <update id="update">
+	 	update free_customer set name =#{name}, id =#{id}, passwd =#{passwd}, 
+			phoneNumber =#{phoneNumber}, passportNumber =#{passportNumber} 
+		 where customerId = #{customerId}
+    </update>
+ 
+    <delete id="delete">
+		delete from free_customer where id = #{id}
+    </delete>
+	
+</mapper>  

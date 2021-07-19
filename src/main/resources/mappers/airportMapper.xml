@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.kpu.myweb.mapper.AirportMapper">
+  
+ 	<select id="getTime" resultType="string">
+ 		select now()
+ 	</select>
+ 	
+     <insert id="insert"> 
+   		insert into free_airport (airportId, price, passengerNumber, departureTime, arriveTime, departureCountry, arriveCountry) values
+ 		(#{airportId}, #{price}, #{passengerNumber}, #{departureTime}, #{arriveTime}, #{departureCountry}, #{arriveCountry})
+     </insert> 
+ 	
+     <select id="selectByid" resultType="AirportVO">
+ 		select * from free_airport where airportlistId = #{airportlistId}
+     </select>
+ 	
+     <select id="selectAll" resultType="org.kpu.myweb.domain.AirportVO">
+     <![CDATA[
+ 		select * from free_airport
+      ]]> 
+     </select>
+ 	
+     <update id="update">
+	 	update free_airport set passengerNumber =#{passengerNumber}, 
+			departureTime =#{departureTime}, arriveTime =#{arriveTime}, departureCountry =#{departureCountry}, arriveCountry =#{arriveCountry} 
+		 where airportlistId = #{airportlistId}
+    </update>
+    
+    <update id="decreaseSeat">
+	 	update free_airport set passengerNumber = passengerNumber-1 where airportlistId = #{airportlistId}
+    </update>
+    
+    <update id="increaseSeat">
+	 	update free_airport set passengerNumber = passengerNumber+1 where airportlistId = #{airportlistId}
+    </update>
+    
+ 
+    <delete id="delete">
+		delete from free_airport where airportlistId = #{airportlistId}
+    </delete>
+	
+</mapper>  

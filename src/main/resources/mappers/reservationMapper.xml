@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.kpu.myweb.mapper.ReservationMapper">
+  
+ 	<select id="getTime" resultType="string">
+ 		select now()
+ 	</select>
+ 	
+     <insert id="insert"> 
+   		insert into free_reservation (airportId, customerId, reserveSeat, reserveTime, reservePrice, reserveSuccess, reserveName, reservePassport) values
+ 		(#{airportId}, #{customerId}, #{reserveSeat}, #{reserveTime}, #{reservePrice}, #{reserveSuccess}, #{reserveName}, #{reservePassport})
+     </insert> 
+ 	
+     <select id="selectByReservid" resultType="ReservationVO">
+ 		select * from free_reservation where reservId = #{reservId}
+     </select>
+ 	
+     <select id="selectAll" resultType="org.kpu.myweb.domain.ReservationVO">
+     <![CDATA[
+ 		select * from free_reservation
+      ]]> 
+     </select>
+     
+     <select id="selectByCustomer" resultType="org.kpu.myweb.domain.ReservationVO">
+     <![CDATA[
+ 		select * from free_reservation where customerId = #{customerId}
+      ]]> 
+     </select>
+     
+     <select id="getLastId" resultType="int">
+	 	SELECT max(reservId) from free_reservation;
+     </select>
+     
+     <select id="selectByAirport" resultType="org.kpu.myweb.domain.ReservationVO">
+     <![CDATA[
+ 		select * from free_reservation where airportId = #{airportId} AND reserveSuccess = 0
+      ]]> 
+     </select>
+     
+ 	
+     <update id="update">
+	 	update free_reservation set airportId =#{airportId}, customerId =#{customerId}, reserveSeat =#{reserveSeat}, 
+			reserveTime =#{reserveTime}, reservePrice =#{reservePrice}, reserveSuccess =#{reserveSuccess}, reserveName =#{reserveName}, reservePassport =#{reservePassport} 
+		 where reservId = #{reservId}
+    </update>
+ 
+    <delete id="delete">
+		delete from free_reservation where reservId = #{reservId}
+    </delete>
+    
+    <delete id="deleteCustomer">
+		delete from free_reservation where customerId = #{customerId}
+    </delete>
+	
+</mapper>  

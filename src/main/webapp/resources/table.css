@@ -1,0 +1,19 @@
+@charset "UTF-8";
+   body {
+       color: black;
+       font-family: '맑은 고딕', '돋움', '고딕';
+   }
+
+   table {
+      border-collapse: collapse;
+   }
+
+   th, td {
+      font-size: 10pt;
+      border: 1px solid lightgray;
+      height: 30px;
+      padding: 5px;
+      color: #000000;
+      background-color: #EAF2D3;
+   }
+   
